@@ -1,0 +1,4 @@
+- name: Install web server for redhat  
+  yum:
+     name: "httpd"
+     state: present
