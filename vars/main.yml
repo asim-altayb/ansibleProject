@@ -1,2 +1,8 @@
 ---
 # vars file for apache_role
+my_name: ASIM ALTAYB
+my_group: Group03
+my_pc: pc09
+redhat_apache_name: httpd
+debian_apache_name: apache2
+freebsd_apache_name: apache24

@@ -1,4 +1,4 @@
 - name: Install web server for debian  
   apt:
-     name: "apache2"
+     name: {{ debian_apache_name }}
      state: present
