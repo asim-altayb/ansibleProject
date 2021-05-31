@@ -6,3 +6,7 @@ my_pc: pc09
 redhat_apache_name: httpd
 debian_apache_name: apache2
 freebsd_apache_name: apache24
+
+redhat_doc_root: 
+debian_doc_root: 
+freebsd_doc_root: 
