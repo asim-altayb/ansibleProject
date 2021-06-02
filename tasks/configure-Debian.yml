@@ -5,7 +5,10 @@
     dest: /etc/apache2/sites-enabled/{{ my_pc }}.conf
   notify: restart apache
 
+- name: Create target directory
+  file: path=/var/www/html/{{ my_pc }} state=directory mode=0755
+
 - name: Copy index file => Debian
   template:
     src: index.html.j2
-    dest: /var/www/html/{{ my_pc }}/{{ my_pc }}.html
+    dest: /var/www/html/{{ my_pc }}/index.html

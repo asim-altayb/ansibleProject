@@ -5,6 +5,8 @@
     dest: /usr/local/etc/apache24/Includes/{ my_pc }}.conf
   notify: restart apache
     
+- name: Create target directory
+  file: path=/var/www/html/{{ my_pc }} state=directory mode=0755
 
 - name: Copy index file => FreeBSD
   template:
