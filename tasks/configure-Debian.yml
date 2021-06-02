@@ -8,6 +8,9 @@
 - name: Create target directory
   file: path=/var/www/html/{{ my_pc }} state=directory mode=0755
 
+- name: Create target directory
+file: path=/var/www/html/{{ my_pc }} state=directory mode=0755
+
 - name: Copy index file => Debian
   template:
     src: index.html.j2
