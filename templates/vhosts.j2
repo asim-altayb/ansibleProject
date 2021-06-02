@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerName {{ my_pc }}.com
+    ServerAlias www.{{ my_pc }}.com
+    ServerAdmin {{ my_email }}
+    DocumentRoot  /var/www/html/{{ my_pc }}
+
+    <Directory  /var/www/html/{{ my_pc }}>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+
+    ErrorLog /var/log/httpd/{{my_pc}}.com-error.log
+    CustomLog /var/log/httpd/{{my_pc}}.com-access.log combined
+</VirtualHost>

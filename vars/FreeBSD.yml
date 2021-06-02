@@ -1,12 +1,12 @@
 ---
-apache_service: apache2
-apache_daemon: apache2
+apache_service: apache24
+apache_daemon: apache24
 apache_daemon_path: /usr/sbin/
-apache_server_root: /etc/apache2
-apache_conf_path: /etc/apache2
+apache_server_root: /etc/apache24
+apache_conf_path: /etc/apache24
 
 __apache_packages:
-  - apache2
+  - apache24
 
 apache_ports_configuration_items:
   - regexp: "^Listen "

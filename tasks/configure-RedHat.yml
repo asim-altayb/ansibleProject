@@ -1,20 +1,12 @@
 ---
-- name: Configure Apache.
-  lineinfile:
-    dest: "{{ apache_server_root }}/conf/{{ apache_daemon }}.conf"
-    regexp: "{{ item.regexp }}"
-    line: "{{ item.line }}"
-    state: present
-    mode: 0644
-  with_items: "{{ apache_ports_configuration_items }}"
+- name: Configure Apache in RedHat
+  template:
+    src: vhosts.j2
+    dest: /etc/httpd/conf.d/{{ my_pc }}.conf
   notify: restart apache
 
-- name: Add apache vhosts configuration.
+- name: Copy index file => RedHat
   template:
-    src: "{{ apache_vhosts_template }}"
-    dest: "{{ apache_conf_path }}/{{ apache_vhosts_filename }}"
-    owner: root
-    group: root
-    mode: 0644
-  notify: restart apache
-  when: apache_create_vhosts | bool
+    src: index.html.j2
+    dest: /var/www/html/{{ my_pc }}/index.html
+

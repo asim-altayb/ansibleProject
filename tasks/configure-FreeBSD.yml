@@ -1,0 +1,12 @@
+---
+- name: Configure Apache in FreeBSD
+  template:
+    src: vhosts.j2
+    dest: /usr/local/etc/apache24/Includes/{ my_pc }}.conf
+  notify: restart apache
+    
+
+- name: Copy index file => FreeBSD
+  template:
+    src: index.html.j2
+    dest: /var/www/html/{{ my_pc }}/index.html
