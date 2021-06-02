@@ -9,6 +9,6 @@
         AllowOverride All
     </Directory>
 
-    ErrorLog ${APACHE_LOG_DIR}/{{my_pc}}-error.log
-    CustomLog ${APACHE_LOG_DIR}/{{my_pc}}-access.log combined
+    ErrorLog {{log_dir}}/{{my_pc}}-error.log
+    CustomLog {{log_dir}}/{{my_pc}}-access.log combined
 </VirtualHost>

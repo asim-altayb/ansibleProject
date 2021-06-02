@@ -30,3 +30,5 @@ my_email: sudoasim@gmail.com
 my_name: ASIM ALTAYB
 
 my_group: Group03
+
+log_dir: /var/log/apache2
