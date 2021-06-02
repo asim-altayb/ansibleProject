@@ -1,0 +1,7 @@
+---
+- name: Apache Role Playbook
+  hosts: all
+  user: ansible
+  become: true
+  roles:
+  - role: apache
