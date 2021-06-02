@@ -1,6 +1,6 @@
 <VirtualHost *:80>
-    ServerName {{ my_pc }}.com
-    ServerAlias www.{{ my_pc }}.com
+    ServerName {{ inventory_hostname }}
+    ServerAlias www.{{ inventory_hostname }}
     ServerAdmin {{ my_email }}
     DocumentRoot  /var/www/html/{{ my_pc }}
 
@@ -9,6 +9,6 @@
         AllowOverride All
     </Directory>
 
-    ErrorLog /var/log/httpd/{{my_pc}}.com-error.log
-    CustomLog /var/log/httpd/{{my_pc}}.com-access.log combined
+    ErrorLog /var/log/httpd/{{my_pc}}-error.log
+    CustomLog /var/log/httpd/{{my_pc}}-access.log combined
 </VirtualHost>
