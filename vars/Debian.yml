@@ -5,9 +5,28 @@ apache_daemon_path: /usr/sbin/
 apache_server_root: /etc/apache2
 apache_conf_path: /etc/apache2
 
-__apache_packages:
+apache_packages:
   - apache2
 
 apache_ports_configuration_items:
   - regexp: "^Listen "
     line: "Listen {{ apache_listen_port }}"
+
+# Set initial apache state. Recommended values: `started` or `stopped`
+apache_state: started
+
+# Set apache state when configuration changes are made. Recommended values:
+# `restarted` or `reloaded`
+apache_restart_state: restarted
+
+# Apache package state; use `present` to make sure it's installed, or `latest`
+# if you want to upgrade or switch versions using a new repo.
+apache_packages_state: present
+
+my_pc: PC09
+
+my_email: sudoasim@gmail.com
+
+my_name: ASIM ALTAYB
+
+my_group: Group03
